@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top AI Tools: Ultimate Artificial Intelligence Directory & Guide</title>
+    <meta name="description" content="Discover top AI tools along with an extensive directory of 50+ AI applications in writing, coding, image generation, video production, research, and automation.">
+    <meta name="keywords" content="Top AI Tools, Artificial Intelligence, ChatGPT, Claude, Gemini, Copilot, DeepSeek, Midjourney, Cursor, AI Directory">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#1e1b4b',
+                            accent: '#06b6d4'
+                        }
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'gradient-x': 'gradientX 6s ease infinite',
+                        'spin-slow': 'spin 12s linear infinite'
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 15px rgba(99, 102, 241, 0.6), 0 0 30px rgba(6, 182, 212, 0.4)' },
+                            '50%': { boxShadow: '0 0 25px rgba(99, 102, 241, 0.9), 0 0 50px rgba(6, 182, 212, 0.7)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' }
+                        },
+                        gradientX: {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card-hover:hover {
+            transform: translateY(-6px) scale(1.01);
+            background: rgba(31, 41, 55, 0.88);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 12px 40px -10px rgba(99, 102, 241, 0.35);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-border-box {
+            position: relative;
+            border-radius: 1rem;
+            background: rgba(17, 24, 39, 0.8);
+        }
+
+        .gradient-border-box::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 1rem;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(6, 182, 212, 0.2), rgba(236, 72, 153, 0.4));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .floating-btn-pulse {
+            position: relative;
+        }
+
+        .floating-btn-pulse::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.6;
+            z-index: -1;
+            animation: pingRipple 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes pingRipple {
+            75%, 100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .logo-icon-svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            display: inline-block;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen text-slate-100 selection:bg-indigo-500 selection:text-white">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-2">
+                <!-- Brand Logo -->
+                <a href="#/home" onclick="navigateTo('home')" class="flex items-center gap-3 group shrink-0">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                        AI
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="text-xl font-black tracking-tight gradient-text">Top AI Tools</span>
+                        <span class="text-xs bg-indigo-500/20 text-indigo-300 font-semibold px-2 py-0.5 rounded-full border border-indigo-500/30 ml-2">Directory</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex flex-col items-center justify-center gap-1.5 py-1">
+                    <!-- Row 1: Core AI Categories -->
+                    <div class="flex items-center gap-1 xl:gap-1.5 overflow-x-auto">
+                        <button onclick="navigateTo('home')" id="nav-home" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Home</button>
+                        <button onclick="navigateTo('chat')" id="nav-chat" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Chat & General</button>
+                        <button onclick="navigateTo('writing')" id="nav-writing" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Writing</button>
+                        <button onclick="navigateTo('coding')" id="nav-coding" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Coding</button>
+                        <button onclick="navigateTo('image')" id="nav-image" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Image</button>
+                        <button onclick="navigateTo('video')" id="nav-video" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Video & Audio</button>
+                        <button onclick="navigateTo('productivity')" id="nav-productivity" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Productivity</button>
+                        <button onclick="navigateTo('automation')" id="nav-automation" class="nav-link px-2.5 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all text-slate-300 hover:text-white hover:bg-slate-800/60 whitespace-nowrap">Automation</button>
+                    </div>
+                    <!-- Row 2: Secondary Nav (Contact & About) -->
+                    <div class="flex items-center gap-3 pt-0.5 border-t border-slate-800/50 w-full justify-center">
+                        <button onclick="navigateTo('contact')" id="nav-contact" class="nav-link px-3 py-1 rounded-md text-xs font-semibold transition-all text-indigo-300 hover:text-white hover:bg-indigo-600/20 whitespace-nowrap">Contact Us</button>
+                        <span class="text-slate-600 text-[10px]">•</span>
+                        <button onclick="navigateTo('about')" id="nav-about" class="nav-link px-3 py-1 rounded-md text-xs font-semibold transition-all text-indigo-300 hover:text-white hover:bg-indigo-600/20 whitespace-nowrap">About Us</button>
+                    </div>
+                </nav>
+
+                <!-- Header Right CTA: Visit YTTags Button -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <a href="https://www.yttags.com/" target="_blank" rel="noopener" 
+                       class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold text-xs shadow-lg shadow-indigo-600/30 hover:scale-105 transition-all border border-indigo-400/30">
+                        <span>Visit: YTTags</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+
+                    <!-- Mobile Navigation Toggle -->
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-none" aria-label="Toggle Navigation Menu">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900/95 border-b border-slate-800 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Home</button>
+            <button onclick="navigateTo('chat')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Chat & General AI</button>
+            <button onclick="navigateTo('writing')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Writing & Content AI</button>
+            <button onclick="navigateTo('coding')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Coding AI</button>
+            <button onclick="navigateTo('image')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Image Generation & Editing</button>
+            <button onclick="navigateTo('video')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Video & Audio AI</button>
+            <button onclick="navigateTo('productivity')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Productivity & Research AI</button>
+            <button onclick="navigateTo('automation')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">AI Automation & Data Tools</button>
+            <button onclick="navigateTo('contact')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">Contact Us</button>
+            <button onclick="navigateTo('about')" class="block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium text-slate-200 hover:bg-indigo-600/20 hover:text-indigo-400">About Us</button>
+        </div>
+    </header>
+
+    <main id="app-content" class="relative z-10 pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- SPA Pages render here dynamically -->
+    </main>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        <!-- Telegram FAB -->
+        <a href="https://t.me/pakainfo" target="_blank" rel="noopener noreferrer" 
+           class="floating-btn-pulse w-14 h-14 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
+           title="Join Telegram Channel">
+            <i class="fa-brands fa-telegram text-2xl group-hover:rotate-12 transition-transform"></i>
+            <span class="absolute right-16 bg-slate-900/90 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-200 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
+                Chat on Telegram
+            </span>
+        </a>
+
+        <!-- WhatsApp FAB -->
+        <a href="https://wa.me/919825606241" target="_blank" rel="noopener noreferrer" 
+           class="floating-btn-pulse w-14 h-14 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
+           title="Contact on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+            <span class="absolute right-16 bg-slate-900/90 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 text-slate-200 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl">
+                Chat on WhatsApp (+91 9825606241)
+            </span>
+        </a>
+    </div>
+
+    <footer class="relative z-10 border-t border-slate-800 bg-slate-950/90 backdrop-blur-md pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+                <!-- Brand Info -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white text-base font-black">AI</div>
+                        <span class="text-lg font-bold text-white">Top AI Tools</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Your trusted directory for finding, comparing, and leveraging the world's most powerful artificial intelligence software solutions.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://wa.me/919825606241" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/pakainfo" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-sky-500 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+                        <a href="https://www.yttags.com/" target="_blank" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links - Column 1 -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Core Directory</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#/home" onclick="navigateTo('home')" class="text-slate-400 hover:text-indigo-400 transition-colors">Home Page</a></li>
+                        <li><a href="#/chat" onclick="navigateTo('chat')" class="text-slate-400 hover:text-indigo-400 transition-colors">Chat & General AI</a></li>
+                        <li><a href="#/writing" onclick="navigateTo('writing')" class="text-slate-400 hover:text-indigo-400 transition-colors">Writing & Content AI</a></li>
+                        <li><a href="#/coding" onclick="navigateTo('coding')" class="text-slate-400 hover:text-indigo-400 transition-colors">Coding AI</a></li>
+                        <li><a href="#/image" onclick="navigateTo('image')" class="text-slate-400 hover:text-indigo-400 transition-colors">Image Generation & Editing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Navigation Links - Column 2 -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Specialized AI</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#/video" onclick="navigateTo('video')" class="text-slate-400 hover:text-indigo-400 transition-colors">Video & Audio AI</a></li>
+                        <li><a href="#/productivity" onclick="navigateTo('productivity')" class="text-slate-400 hover:text-indigo-400 transition-colors">Productivity & Research AI</a></li>
+                        <li><a href="#/automation" onclick="navigateTo('automation')" class="text-slate-400 hover:text-indigo-400 transition-colors">AI Automation & Data Tools</a></li>
+                        <li><a href="#/contact" onclick="navigateTo('contact')" class="text-slate-400 hover:text-indigo-400 transition-colors">Contact Us</a></li>
+                        <li><a href="#/about" onclick="navigateTo('about')" class="text-slate-400 hover:text-indigo-400 transition-colors">About Directory</a></li>
+                    </ul>
+                </div>
+
+                <!-- Featured External Link & Newsletter -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Featured Partner</h4>
+                    <p class="text-xs text-slate-400 mb-3">Optimize YouTube channel growth with automated tags and keyword analysis.</p>
+                    <a href="https://www.yttags.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs px-4 py-2.5 rounded-lg bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold hover:opacity-90 transition-opacity shadow-lg">
+                        <span>Visit: YTTags</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright bar -->
+            <div class="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© Top AI Tools Directory. All rights reserved.</p>
+                <div class="flex gap-6 text-slate-400">
+                    <a href="https://sites.google.com/view/top-10-ai-tools-in-2026/home" target="_blank" class="hover:text-white transition-colors">Official Portal</a>
+                    <a href="#/contact" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Support</a>
+                    <a href="#/about" onclick="navigateTo('about')" class="hover:text-white transition-colors">Privacy & Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Official SVG Brand Logos Repository
+        const brandLogos = {
+            chatgpt: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M22.28 10.42a5.75 5.75 0 0 0-.5-4.22 5.86 5.86 0 0 0-3.23-2.73 5.76 5.76 0 0 0-5.71 1.05 5.76 5.76 0 0 0-4.83-1.07A5.85 5.85 0 0 0 4.67 5.7a5.75 5.75 0 0 0-.81 4.18 5.86 5.86 0 0 0 1 4.13 5.76 5.76 0 0 0 .5 4.22 5.86 5.86 0 0 0 3.23 2.73 5.76 5.76 0 0 0 5.71-1.05 5.76 5.76 0 0 0 4.83 1.07 5.85 5.85 0 0 0 3.34-2.25 5.75 5.75 0 0 0 .81-4.18 5.86 5.86 0 0 0-1-4.13zm-8.31 10.15a4.26 4.26 0 0 1-2.31-.67l.14-.24 2.85-1.65a.77.77 0 0 0 .39-.67v-3.72l1.15.66v3.31a4.28 4.28 0 0 1-2.22 2.38zm-7.6-3.23a4.27 4.27 0 0 1-.58-2.33l.26.15 2.85 1.65a.77.77 0 0 0 .78 0l3.22-1.86v1.33l-2.87 1.66a4.27 4.27 0 0 1-3.66-.6zm-1.12-8a4.26 4.26 0 0 1 1.73-1.67v3.08l2.85 1.65a.77.77 0 0 0 .39.11.72.72 0 0 0 .39-.11l3.22-1.86-1.15-.66-2.87 1.65a.76.76 0 0 1-.78 0l-3.78-2.19zm13.3 2.11l-3.22 1.86v-1.33l2.87-1.66a4.28 4.28 0 0 1 4.24 3.93 4.27 4.27 0 0 1-.58 2.33l-.26-.15-2.85-1.65a.77.77 0 0 0-.78 0zm1.7-4.18a4.26 4.26 0 0 1-1.73 1.67v-3.08l-2.85-1.65a.77.77 0 0 0-.78 0l-3.22 1.86 1.15.66 2.87-1.66a.76.76 0 0 1 .78 0l3.78 2.2zm-9.33-4.52a4.28 4.28 0 0 1 2.31.67l-.14.24-2.85 1.65a.77.77 0 0 0-.39.67v3.72l-1.15-.66v-3.31a4.28 4.28 0 0 1 2.22-2.98zm.39 6.83l1.58-.91 1.58.91v1.82l-1.58.92-1.58-.92v-1.82z"/></svg>`,
+            claude: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/></svg>`,
+            gemini: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"/></svg>`,
+            copilot: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>`,
+            perplexity: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2L19.5 8 12 11.8 4.5 8 12 4.2zM4 9.3l7 3.5v7l-7-3.5v-7zm16 7l-7 3.5v-7l7-3.5v7z"/></svg>`,
+            grok: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
+            deepseek: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>`,
+            meta: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`,
+            poe: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2z"/></svg>`,
+            character: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2.22-1.45 4.1-3.45 4.75A7.002 7.002 0 0120 18v2H4v-2a7.002 7.002 0 016.45-6.25C8.45 11.1 7 9.22 7 7a5 5 0 015-5z"/></svg>`,
+            github: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>`,
+            cursor: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M13.64 21.97l-3.23-7.56-4.57 4.57V3l14 10.5-5.69.88 3.33 7.74-3.84 1.85z"/></svg>`,
+            midjourney: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M12 2L2 19h20L12 2zm0 4l6 11H6l6-11z"/></svg>`,
+            runway: `<svg class="logo-icon-svg" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm4 4v8l8-4-8-4z"/></svg>`
+        };
+
+        // Top 10 Featured AI Tools
+        const top10Tools = [
+            { id: 1, name: "ChatGPT", developer: "OpenAI", desc: "Writing, coding, Q&A, versatile general intelligence AI.", iconSvg: brandLogos.chatgpt, fallbackIcon: "fa-robot", color: "from-emerald-500 to-teal-700", url: "https://chatgpt.com/" },
+            { id: 2, name: "Claude", developer: "Anthropic", desc: "Long documents, complex coding, detailed logical analysis.", iconSvg: brandLogos.claude, fallbackIcon: "fa-brain", color: "from-amber-500 to-orange-700", url: "https://claude.ai/" },
+            { id: 3, name: "Gemini", developer: "Google", desc: "Google Search & Workspace integrated AI assistant.", iconSvg: brandLogos.gemini, fallbackIcon: "fa-sparkles", color: "from-blue-500 to-indigo-700", url: "https://gemini.google.com/" },
+            { id: 4, name: "Microsoft Copilot", developer: "Microsoft", desc: "Windows & Office 365 applications built-in AI assistant.", iconSvg: brandLogos.copilot, fallbackIcon: "fa-microsoft", color: "from-cyan-500 to-blue-700", url: "https://copilot.microsoft.com/" },
+            { id: 5, name: "Perplexity AI", developer: "Perplexity", desc: "Real-time web search engine with verified live citations.", iconSvg: brandLogos.perplexity, fallbackIcon: "fa-magnifying-glass-nodes", color: "from-teal-400 to-emerald-600", url: "https://www.perplexity.ai/" },
+            { id: 6, name: "Grok", developer: "xAI", desc: "X (Twitter) integrated real-time AI assistant.", iconSvg: brandLogos.grok, fallbackIcon: "fa-x-twitter", color: "from-slate-600 to-slate-900", url: "https://x.ai/" },
+            { id: 7, name: "DeepSeek", developer: "DeepSeek AI", desc: "High reasoning capability for math, logic, and coding.", iconSvg: brandLogos.deepseek, fallbackIcon: "fa-microchip", color: "from-blue-600 to-cyan-600", url: "https://www.deepseek.com/" },
+            { id: 8, name: "Meta AI", developer: "Meta", desc: "WhatsApp, Instagram, and Messenger conversational AI.", iconSvg: brandLogos.meta, fallbackIcon: "fa-comments", color: "from-sky-500 to-blue-600", url: "https://www.meta.ai/" },
+            { id: 9, name: "Poe", developer: "Quora", desc: "Multi-model workspace app to access top AI models.", iconSvg: brandLogos.poe, fallbackIcon: "fa-layer-group", color: "from-purple-500 to-indigo-800", url: "https://poe.com/" },
+            { id: 10, name: "Character.AI", developer: "Character Tech", desc: "Interactive customized AI characters for flexible conversations.", iconSvg: brandLogos.character, fallbackIcon: "fa-masks-theater", color: "from-pink-500 to-rose-700", url: "https://character.ai/" }
+        ];
+
+        // Categorized AI Tools Datasets (50+ Tools)
+        const categorizedTools = {
+            writing: [
+                { name: "Jasper AI", desc: "Enterprise marketing copy and content generation platform.", fallbackIcon: "fa-pen-nib", url: "https://www.jasper.ai/" },
+                { name: "Copy.ai", desc: "AI writing generator for marketing, sales emails, and blogs.", fallbackIcon: "fa-copy", url: "https://www.copy.ai/" },
+                { name: "Grammarly AI", desc: "Grammar check, style, tone, and sentence rewrites.", fallbackIcon: "fa-check-double", url: "https://www.grammarly.com/" },
+                { name: "QuillBot", desc: "AI paraphrasing tool, grammar checker, and summarizer.", fallbackIcon: "fa-feather", url: "https://quillbot.com/" },
+                { name: "Notion AI", desc: "Integrated assistant inside Notion for notes and ideas.", fallbackIcon: "fa-note-sticky", url: "https://www.notion.so/product/ai" },
+                { name: "Rytr", desc: "Affordable AI writing assistant for high-quality content.", fallbackIcon: "fa-wand-magic-sparkles", url: "https://rytr.me/" },
+                { name: "Wordtune", desc: "Rewrites thoughts into clear, compelling communication.", fallbackIcon: "fa-font", url: "https://www.wordtune.com/" }
+            ],
+            coding: [
+                { name: "GitHub Copilot", desc: "AI pair programmer suggesting code directly in your IDE.", iconSvg: brandLogos.github, fallbackIcon: "fa-code-branch", url: "https://github.com/features/copilot" },
+                { name: "Cursor Editor", desc: "AI-native code editor built on VS Code foundation.", iconSvg: brandLogos.cursor, fallbackIcon: "fa-terminal", url: "https://www.cursor.com/" },
+                { name: "Windsurf", desc: "Agentic AI IDE with integrated automated workflows.", fallbackIcon: "fa-wind", url: "https://codeium.com/windsurf" },
+                { name: "Replit Ghostwriter", desc: "In-browser collaborative coding environment with inline AI.", fallbackIcon: "fa-laptop-code", url: "https://replit.com/" },
+                { name: "Tabnine", desc: "Privacy-focused AI code completion assistant.", fallbackIcon: "fa-square-code", url: "https://www.tabnine.com/" },
+                { name: "v0 by Vercel", desc: "Generative UI system converting natural language to React code.", fallbackIcon: "fa-cubes", url: "https://v0.dev/" }
+            ],
+            image: [
+                { name: "Midjourney", desc: "State-of-the-art artwork generation via Discord/Web.", iconSvg: brandLogos.midjourney, fallbackIcon: "fa-palette", url: "https://www.midjourney.com/" },
+                { name: "DALL-E 3", desc: "Photorealistic and artistic image generation by OpenAI.", iconSvg: brandLogos.chatgpt, fallbackIcon: "fa-image", url: "https://openai.com/dall-e-3" },
+                { name: "Stable Diffusion", desc: "Open source text-to-image generative model.", fallbackIcon: "fa-sliders", url: "https://stability.ai/" },
+                { name: "Leonardo.ai", desc: "Generative AI platform for game assets and visual design.", fallbackIcon: "fa-paintbrush", url: "https://leonardo.ai/" },
+                { name: "Adobe Firefly", desc: "Generative AI tool for image editing in Creative Cloud.", fallbackIcon: "fa-wand-magic", url: "https://www.adobe.com/products/firefly.html" },
+                { name: "Canva Magic Studio", desc: "AI image background removal and design magic.", fallbackIcon: "fa-shapes", url: "https://www.canva.com/magic/" },
+                { name: "Remove.bg", desc: "Instant background removal from images in 5 seconds.", fallbackIcon: "fa-eraser", url: "https://www.remove.bg/" },
+                { name: "Magnific AI", desc: "High resolution image upscaler and detail enhancer.", fallbackIcon: "fa-expand", url: "https://magnific.ai/" }
+            ],
+            video: [
+                { name: "Runway Gen-3", desc: "Generative AI for video synthesis and animation.", iconSvg: brandLogos.runway, fallbackIcon: "fa-video", url: "https://runwayml.com/" },
+                { name: "OpenAI Sora", desc: "Realistic high-definition text-to-video generation.", iconSvg: brandLogos.chatgpt, fallbackIcon: "fa-film", url: "https://openai.com/sora" },
+                { name: "Pika Labs", desc: "Idea-to-video platform bringing photos to life.", fallbackIcon: "fa-clapperboard", url: "https://pika.art/" },
+                { name: "Synthesia", desc: "AI video generation using realistic digital human avatars.", fallbackIcon: "fa-user-tie", url: "https://www.synthesia.io/" },
+                { name: "ElevenLabs", desc: "Realistic voice synthesis, voice cloning, and text-to-speech.", fallbackIcon: "fa-microphone", url: "https://elevenlabs.io/" },
+                { name: "Descript", desc: "Edit podcasts and videos by editing text transcripts.", fallbackIcon: "fa-scissors", url: "https://www.descript.com/" },
+                { name: "Murf AI", desc: "Versatile AI voice generator for ads and presentations.", fallbackIcon: "fa-volume-high", url: "https://murf.ai/" },
+                { name: "Suno AI", desc: "Generate full studio-quality songs and music from text.", fallbackIcon: "fa-music", url: "https://suno.com/" }
+            ],
+            productivity: [
+                { name: "NotebookLM", desc: "Google research assistant based on your uploaded files.", iconSvg: brandLogos.gemini, fallbackIcon: "fa-book-bookmark", url: "https://notebooklm.google.com/" },
+                { name: "Otter.ai", desc: "Automated meeting transcription and key summaries.", fallbackIcon: "fa-otter", url: "https://otter.ai/" },
+                { name: "Fireflies.ai", desc: "AI voice assistant for capturing meeting notes.", fallbackIcon: "fa-fire", url: "https://fireflies.ai/" },
+                { name: "Gamma App", desc: "Create presentations and documents in seconds.", fallbackIcon: "fa-chart-line", url: "https://gamma.app/" },
+                { name: "Tome", desc: "Generative story and presentation builder.", fallbackIcon: "fa-file-powerpoint", url: "https://tome.app/" },
+                { name: "Elicit", desc: "AI research assistant automating literature reviews.", fallbackIcon: "fa-graduation-cap", url: "https://elicit.com/" },
+                { name: "Scite.ai", desc: "Discover scientific papers with citation analysis.", fallbackIcon: "fa-microscope", url: "https://scite.ai/" }
+            ],
+            automation: [
+                { name: "Zapier AI", desc: "Automate complex workflows across 6,000+ apps.", fallbackIcon: "fa-bolt", url: "https://zapier.com/" },
+                { name: "Make.com", desc: "Visual automation platform to connect apps and AI workflows.", fallbackIcon: "fa-diagram-project", url: "https://www.make.com/" },
+                { name: "Chatbase", desc: "Build custom chatbots trained directly on your data.", fallbackIcon: "fa-message", url: "https://www.chatbase.co/" },
+                { name: "GPT for Sheets", desc: "Integrate LLM formulas directly into spreadsheets.", fallbackIcon: "fa-file-excel", url: "https://gptforwork.com/" }
+            ]
+        };
+
+        const keyBenefits = [
+            { title: "Peak Productivity Booster", desc: "Automate repetitive writing, coding, and operational tasks to save time daily.", icon: "fa-rocket", color: "from-indigo-500 to-purple-600" },
+            { title: "24/7 Intelligent Automation", desc: "Deploy AI bots and continuous workflows that execute round-the-clock.", icon: "fa-clock", color: "from-cyan-500 to-blue-600" },
+            { title: "High Precision Data Analysis", desc: "Extract deep research insights, document summaries, and trend forecasts.", icon: "fa-chart-pie", color: "from-emerald-500 to-teal-600" },
+            { title: "Infinite Creative Power", desc: "Generate artwork, soundscapes, and HD video directly from simple text.", icon: "fa-wand-magic-sparkles", color: "from-pink-500 to-rose-600" },
+            { title: "Error-Free Code Generation", desc: "Accelerate software development with context-aware code completions.", icon: "fa-code", color: "from-amber-500 to-orange-600" },
+            { title: "Personalized Skill Expansion", desc: "Master new domains and technical workflows with custom AI tutors.", icon: "fa-graduation-cap", color: "from-violet-500 to-indigo-600" }
+        ];
+
+        const faqList = [
+            { q: "1. What is the Top AI Tools directory?", a: "It is a curated directory showcasing top artificial intelligence applications across chat, writing, coding, visual arts, audio, and enterprise automation." },
+            { q: "2. Are these AI tools free or paid?", a: "Most AI tools offer generous freemium tiers alongside upgraded pro plans for enterprise capabilities." },
+            { q: "3. What is the overall best all-rounder AI tool?", a: "ChatGPT (OpenAI) remains the most versatile all-rounder for general knowledge, writing, and coding support." },
+            { q: "4. Which AI tool is best for coding?", a: "Cursor, GitHub Copilot, and Windsurf excel for software developers, while DeepSeek offers exceptional reasoning." },
+            { q: "5. What is the best AI tool for long document analysis?", a: "Claude by Anthropic and NotebookLM by Google lead in handling massive text contexts and research." },
+            { q: "6. Which AI tool gives real-time web search results with citations?", a: "Perplexity AI provides search answers backed by real-time source links and web citations." },
+            { q: "7. How can I use AI for marketing and content generation?", a: "Tools like Jasper, Copy.ai, and Grammarly help generate marketing copy and error-free copy at scale." },
+            { q: "8. What are the best image generation AI tools?", a: "Midjourney, DALL-E 3, Leonardo.ai, and Adobe Firefly lead in producing stunning visual assets." },
+            { q: "9. Can AI tools generate realistic videos and audio?", a: "Yes, platforms like Runway, Sora, Pika, ElevenLabs, and Suno produce video clips, voiceovers, and music." },
+            { q: "10. How do AI automation tools work for business workflow?", a: "Platforms like Zapier AI and Make connect software applications to trigger automated tasks without manual data entry." },
+            { q: "11. How frequently is this AI tools directory updated?", a: "Our directory is reviewed and updated continuously to reflect new model releases and emerging capabilities." }
+        ];
+
+        function renderToolIcon(tool) {
+            if (tool.iconSvg) {
+                return tool.iconSvg;
+            }
+            return `<i class="fa-solid ${tool.fallbackIcon}"></i>`;
+        }
+
+        function renderHome() {
+            return `
+                <section class="text-center mb-16 animate-fadeIn">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-indigo-300 mb-6 border border-indigo-500/30">
+                        <i class="fa-solid fa-sparkles text-amber-400"></i>
+                        <span>Updated AI Directory & Guide</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 max-w-5xl mx-auto">
+                        Top AI Tools: <span class="gradient-text">Ultimate Artificial Intelligence Directory</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
+                        Explore our expert-selected general AI tools, along with specialized solutions for writing, coding, image art, sound production, and workflow automation.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="https://www.yttags.com/" target="_blank" rel="noopener" 
+                           class="px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold text-base shadow-xl shadow-indigo-600/40 hover:scale-105 hover:shadow-indigo-500/60 transition-all border border-indigo-300/30 flex items-center gap-2">
+                            <span>Explore Details & Tools</span>
+                            <span class="text-lg">→</span>
+                        </a>
+                        <button onclick="scrollToSection('top10-list')" class="px-8 py-4 rounded-full glass-card text-slate-200 hover:text-white font-semibold text-base hover:bg-slate-800 transition-all border border-slate-700">
+                            View Featured List
+                        </button>
+                    </div>
+                </section>
+            <!-- Bottom Copyright bar -->
+            <div class="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>© Top AI Tools Directory. All rights reserved.</p>
+                <div class="flex gap-6 text-slate-400">
+                    <a href="https://sites.google.com/view/top-10-ai-tools-in-2026/home" target="_blank" class="hover:text-white transition-colors">Official Portal</a>
+                    <a href="#/contact" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Support</a>
+                    <a href="#/about" onclick="navigateTo('about')" class="hover:text-white transition-colors">Privacy & Terms</a>
+                </div>
+            </div>
+                </div>
+
+                <section id="top10-list" class="mb-20">
+                    <div class="flex items-center justify-between mb-8">
+                        <div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Top Featured AI Tools</h2>
+                            <p class="text-slate-400 text-xs sm:text-sm">Popular and powerful artificial intelligence applications</p>
+                        </div>
+                        <span class="hidden sm:inline-block text-xs text-indigo-400 font-semibold px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">Featured Selection</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="top10-grid">
+                        ${top10Tools.map((tool) => `
+                            <div class="tool-card glass-card glass-card-hover rounded-2xl p-6 relative overflow-hidden group flex flex-col justify-between" data-name="${tool.name.toLowerCase()}">
+                                <div class="absolute -right-10 -top-10 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all"></div>
+                                <div>
+                                    <div class="flex items-center justify-between mb-4">
+                                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr ${tool.color} flex items-center justify-center text-white text-xl shadow-lg">
+                                            ${renderToolIcon(tool)}
+                                        </div>
+                                        <span class="text-xs font-mono font-bold text-indigo-400 bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-700">#${tool.id}</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white mb-1 group-hover:text-indigo-400 transition-colors">${tool.name}</h3>
+                                    <p class="text-xs text-indigo-300/80 font-medium mb-3">${tool.developer}</p>
+                                    <p class="text-slate-300 text-xs leading-relaxed mb-6">${tool.desc}</p>
+                                </div>
+                                <a href="${tool.url}" target="_blank" rel="noopener" class="w-full py-2.5 rounded-xl bg-slate-800/80 hover:bg-indigo-600 text-slate-200 hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                                    <span>Visit Official ${tool.name}</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <section class="mb-20 glass-card rounded-3xl p-8 sm:p-10 border border-indigo-500/20">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Why AI Tools Matter</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Artificial intelligence is the core engine behind software development, creative media production, scientific research, and daily workflow automation. Modern AI tools utilize multimodal large language models capable of reasoning, writing code, generating artwork, and communicating fluidly.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-300">
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <span class="font-bold text-indigo-400 block mb-1">Multimodal Integration</span>
+                            Unified image, text, and voice reasoning inside a single conversation interface.
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <span class="font-bold text-indigo-400 block mb-1">Agentic Capabilities</span>
+                            AI agents capable of performing multi-step web research and autonomous code execution.
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                            <span class="font-bold text-indigo-400 block mb-1">Seamless Applications</span>
+                            Direct integration into Microsoft 365, Google Workspace, WhatsApp, and GitHub environments.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">6 Key Benefits of Using AI Tools</h2>
+                        <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto">Discover how artificial intelligence transforms personal productivity and business efficiency</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${keyBenefits.map((benefit) => `
+                            <div class="gradient-border-box p-6 hover:-translate-y-1 transition-transform">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr ${benefit.color} flex items-center justify-center text-white text-xl mb-4 shadow-lg">
+                                    <i class="fa-solid ${benefit.icon}"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">${benefit.title}</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed">${benefit.desc}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <div class="text-center mb-12">
+                        <h2 class="text-2xl sm:text-4xl font-black text-white mb-3">Frequently Asked Questions (FAQ)</h2>
+                        <p class="text-slate-400 text-xs sm:text-sm">Common questions regarding top AI tools</p>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto space-y-4">
+                        ${faqList.map((faq, idx) => `
+                            <div class="glass-card rounded-2xl border border-slate-800 overflow-hidden transition-all">
+                                <button onclick="toggleFaq(${idx})" class="w-full text-left p-5 font-semibold text-sm text-slate-200 hover:text-white flex items-center justify-between gap-4">
+                                    <span>${faq.q}</span>
+                                    <i id="faq-icon-${idx}" class="fa-solid fa-chevron-down text-indigo-400 transition-transform"></i>
+                                </button>
+                                <div id="faq-ans-${idx}" class="hidden p-5 pt-0 text-xs text-slate-300 leading-relaxed border-t border-slate-800/50 bg-slate-900/40">
+                                    ${faq.a}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderCategoryPage(title, subtitle, toolsKey, mainIcon) {
+            const tools = categorizedTools[toolsKey] || [];
+            return `
+                <div class="animate-fadeIn">
+                    <div class="text-center mb-12">
+                        <div class="w-16 h-16 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl mx-auto mb-4">
+                            <i class="fa-solid ${mainIcon}"></i>
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl font-black text-white mb-3">${title}</h1>
+                        <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">${subtitle}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${tools.map((t) => `
+                            <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between group">
+                                <div>
+                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white text-xl mb-4 shadow-lg">
+                                        ${renderToolIcon(t)}
+                                    </div>
+                                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">${t.name}</h3>
+                                    <p class="text-slate-300 text-xs leading-relaxed mb-6">${t.desc}</p>
+                                </div>
+                                <a href="${t.url}" target="_blank" rel="noopener" class="w-full py-2.5 rounded-xl bg-slate-800/80 hover:bg-indigo-600 text-slate-200 hover:text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+                                    <span>Try ${t.name} Official</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderContact() {
+            return `
+                <div class="max-w-4xl mx-auto animate-fadeIn">
+                    <div class="text-center mb-12">
+                        <h1 class="text-3xl sm:text-5xl font-black text-white mb-3">Contact Us</h1>
+                        <p class="text-slate-400 text-sm sm:text-base">Get in touch with the Top AI Tools directory team</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="glass-card rounded-2xl p-6 text-center border border-emerald-500/30">
+                            <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">WhatsApp Support</h3>
+                            <p class="text-xs text-slate-400 mb-6">Direct instant messaging support for inquiries & tool submission.</p>
+                            <a href="https://wa.me/919825606241" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition-colors">
+                                <i class="fa-brands fa-whatsapp text-base"></i>
+                                <span>Message +91 9825606241</span>
+                            </a>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 text-center border border-sky-500/30">
+                            <div class="w-14 h-14 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                                <i class="fa-brands fa-telegram"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Telegram Community</h3>
+                            <p class="text-xs text-slate-400 mb-6">Join our official Telegram community channel for live AI updates.</p>
+                            <a href="https://t.me/pakainfo" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 text-white font-bold text-xs hover:bg-sky-400 transition-colors">
+                                <i class="fa-brands fa-telegram text-base"></i>
+                                <span>Join @pakainfo Channel</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-3xl p-8 border border-slate-800">
+                        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-indigo-400"></i>
+                            <span>Send Us a Direct Message</span>
+                        </h2>
+                        <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-2">Full Name</label>
+                                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs focus:outline-none focus:border-indigo-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-2">Email Address</label>
+                                    <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs focus:outline-none focus:border-indigo-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Subject</label>
+                                <input type="text" required placeholder="AI Tool Listing / Inquiry" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs focus:outline-none focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-2">Your Message</label>
+                                <textarea rows="4" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-xs focus:outline-none focus:border-indigo-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-bold text-xs hover:opacity-90 transition-opacity">
+                                Submit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAbout() {
+            return `
+                <div class="max-w-4xl mx-auto animate-fadeIn">
+                    <div class="text-center mb-12">
+                        <h1 class="text-3xl sm:text-5xl font-black text-white mb-3">About Us Directory</h1>
+                        <p class="text-slate-400 text-sm sm:text-base">Empowering developers, creators, and leaders with AI technology</p>
+                    </div>
+
+                    <div class="glass-card rounded-3xl p-8 sm:p-10 space-y-6 text-slate-300 text-sm leading-relaxed border border-indigo-500/20">
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-bullseye text-indigo-400"></i>
+                                <span>Our Mission</span>
+                            </h2>
+                            <p>
+                                The <strong>Top AI Tools Directory</strong> provides an unbiased, comprehensive repository of state-of-the-art generative artificial intelligence applications. Our mission is to simplify tool discovery for developers, writers, designers, and enterprise decision-makers.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-filter text-indigo-400"></i>
+                                <span>Curated Standards</span>
+                            </h2>
+                            <p>
+                                Every tool in our listing undergoes systematic evaluation regarding model accuracy, execution latency, security standards, UI design, and pricing value.
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800 flex flex-wrap justify-between items-center gap-4">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Official Website Hub:</span>
+                                <a href="https://sites.google.com/view/top-10-ai-tools-in-2026/home" target="_blank" class="text-indigo-400 font-semibold text-xs hover:underline">
+                                    sites.google.com/view/top-10-ai-tools-in-2026/home
+                                </a>
+                            </div>
+                            <a href="#/contact" onclick="navigateTo('contact')" class="px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold text-xs hover:bg-indigo-500 transition-colors">
+                                Contact Directory Team
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function navigateTo(pageKey) {
+            const validPages = ['home', 'chat', 'writing', 'coding', 'image', 'video', 'productivity', 'automation', 'contact', 'about'];
+            if (!validPages.includes(pageKey)) pageKey = 'home';
+
+            document.querySelectorAll('.nav-link').forEach(el => {
+                el.classList.remove('bg-indigo-600', 'text-white');
+                el.classList.add('text-slate-300');
+            });
+            const activeNav = document.getElementById(`nav-${pageKey}`);
+            if (activeNav) {
+                activeNav.classList.add('bg-indigo-600', 'text-white');
+                activeNav.classList.remove('text-slate-300');
+            }
+
+            document.getElementById('mobile-menu').classList.add('hidden');
+            const contentContainer = document.getElementById('app-content');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            switch (pageKey) {
+                case 'home':
+                    contentContainer.innerHTML = renderHome();
+                    break;
+                case 'chat':
+                    contentContainer.innerHTML = renderCategoryPage('Chat & General AI', 'All-rounder conversational AI chatbots and general intelligence assistants', 'writing', 'fa-comments');
+                    break;
+                case 'writing':
+                    contentContainer.innerHTML = renderCategoryPage('Writing & Content AI', 'AI tools for copywriting, paraphrasing, blog creation, and grammar', 'writing', 'fa-pen-nib');
+                    break;
+                case 'coding':
+                    contentContainer.innerHTML = renderCategoryPage('Coding AI', 'Generative code assistants, IDEs, and automated debugging tools', 'coding', 'fa-code');
+                    break;
+                case 'image':
+                    contentContainer.innerHTML = renderCategoryPage('Image Generation & Editing', 'Text-to-image artwork, background removal, and high-res upscaling', 'image', 'fa-palette');
+                    break;
+                case 'video':
+                    contentContainer.innerHTML = renderCategoryPage('Video & Audio AI', 'Cinematic video synthesis, realistic voice generators, and music tools', 'video', 'fa-video');
+                    break;
+                case 'productivity':
+                    contentContainer.innerHTML = renderCategoryPage('Productivity & Research AI', 'Automated research paper synthesis, meeting transcriptions, and slide deck generators', 'productivity', 'fa-brain');
+                    break;
+                case 'automation':
+                    contentContainer.innerHTML = renderCategoryPage('AI Automation & Data Tools', 'Connect enterprise applications, build chatbots, and automate spreadsheets', 'automation', 'fa-diagram-project');
+                    break;
+                case 'contact':
+                    contentContainer.innerHTML = renderContact();
+                    break;
+                case 'about':
+                    contentContainer.innerHTML = renderAbout();
+                    break;
+            }
+
+            initCanvasBackground(pageKey);
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function toggleFaq(idx) {
+            const ans = document.getElementById(`faq-ans-${idx}`);
+            const icon = document.getElementById(`faq-icon-${idx}`);
+            if (ans.classList.contains('hidden')) {
+                ans.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        function filterTools() {
+            const input = document.getElementById('tool-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.tool-card');
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name');
+                if (name.includes(input)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent successfully.');
+            e.target.reset();
+        }
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Custom High-Quality Dynamic Interactive Canvas Backgrounds for Each Page
+        let animationFrameId;
+        function initCanvasBackground(theme) {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            const count = Math.min(Math.floor(width / 25), 50);
+            const items = [];
+
+            for (let i = 0; i < count; i++) {
+                items.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 1.2,
+                    vy: (Math.random() - 0.5) * 1.2,
+                    size: Math.random() * 20 + 10,
+                    angle: Math.random() * Math.PI * 2,
+                    vAngle: (Math.random() - 0.5) * 0.02,
+                    char: String.fromCharCode(0x30A0 + Math.random() * 96),
+                    keyLabel: ['A', 'S', 'D', 'F', 'AI', 'CTRL', 'ENTER', 'TAB'][Math.floor(Math.random() * 8)]
+                });
+            }
+
+            let tick = 0;
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                tick += 0.02;
+
+                // 1. "Chat & General AI": Neural network + animated chat speech bubbles
+                if (theme === 'chat') {
+                    ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';
+                    ctx.strokeStyle = 'rgba(99, 102, 241, 0.15)';
+
+                    items.forEach((p, i) => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        // Speech bubble
+                        ctx.beginPath();
+                        ctx.roundRect(p.x, p.y, p.size * 1.8, p.size, 6);
+                        ctx.fillStyle = 'rgba(99, 102, 241, 0.12)';
+                        ctx.fill();
+                        ctx.strokeStyle = 'rgba(6, 182, 212, 0.25)';
+                        ctx.stroke();
+
+                        // Inner chat dots
+                        ctx.fillStyle = 'rgba(165, 180, 252, 0.6)';
+                        ctx.beginPath();
+                        ctx.arc(p.x + p.size * 0.5, p.y + p.size * 0.5, 2, 0, Math.PI * 2);
+                        ctx.arc(p.x + p.size * 0.9, p.y + p.size * 0.5, 2, 0, Math.PI * 2);
+                        ctx.arc(p.x + p.size * 1.3, p.y + p.size * 0.5, 2, 0, Math.PI * 2);
+                        ctx.fill();
+                    });
+                }
+                // 2. "Writing & Content AI": Dynamic Mechanical Keycaps + Cursor prompts
+                else if (theme === 'writing') {
+                    items.forEach(p => {
+                        p.y += p.vy * 0.8;
+                        p.x += Math.sin(tick + p.y * 0.01) * 0.5;
+                        if (p.y < -30) p.y = height + 30;
+                        if (p.y > height + 30) p.y = -30;
+
+                        // Keycap style box
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.fillStyle = 'rgba(30, 41, 59, 0.5)';
+                        ctx.strokeStyle = 'rgba(165, 180, 252, 0.3)';
+                        ctx.lineWidth = 1.5;
+                        ctx.beginPath();
+                        ctx.roundRect(-15, -15, 30, 30, 5);
+                        ctx.fill();
+                        ctx.stroke();
+
+                        ctx.fillStyle = 'rgba(224, 231, 255, 0.6)';
+                        ctx.font = '10px Fira Code';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText(p.keyLabel, 0, 0);
+                        ctx.restore();
+                    });
+                }
+                // 3. "Image Generation & Editing": RGB Color Palettes & Aperture Rings
+                else if (theme === 'image') {
+                    items.forEach((p, idx) => {
+                        p.angle += p.vAngle;
+                        p.x += p.vx * 0.5;
+                        p.y += p.vy * 0.5;
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.angle);
+
+                        // Rotating color wheel ring
+                        const grad = ctx.createConicGradient(p.angle, 0, 0);
+                        grad.addColorStop(0, 'rgba(236, 72, 153, 0.3)');
+                        grad.addColorStop(0.33, 'rgba(6, 182, 212, 0.3)');
+                        grad.addColorStop(0.66, 'rgba(245, 158, 11, 0.3)');
+                        grad.addColorStop(1, 'rgba(236, 72, 153, 0.3)');
+
+                        ctx.strokeStyle = grad;
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.arc(0, 0, p.size, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.restore();
+                    });
+                }
+                // 4. "Productivity & Research AI": Rotating Gears & Flow Node Graphs
+                else if (theme === 'productivity') {
+                    items.forEach(p => {
+                        p.angle += 0.01;
+                        p.x += p.vx * 0.4;
+                        p.y += p.vy * 0.4;
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        // Research Gear shape
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.angle);
+                        ctx.strokeStyle = 'rgba(99, 102, 241, 0.25)';
+                        ctx.lineWidth = 1.5;
+
+                        ctx.beginPath();
+                        for (let g = 0; g < 6; g++) {
+                            ctx.rotate(Math.PI / 3);
+                            ctx.rect(-2, -p.size, 4, 6);
+                        }
+                        ctx.arc(0, 0, p.size * 0.7, 0, Math.PI * 2);
+                        ctx.stroke();
+                        ctx.restore();
+                    });
+                }
+                // 5. "AI Automation & Data Tools": Flowchart pipelines & Data packets
+                else if (theme === 'automation') {
+                    ctx.strokeStyle = 'rgba(16, 185, 129, 0.2)';
+                    ctx.lineWidth = 1.5;
+
+                    items.forEach((p, idx) => {
+                        p.x += 1.5;
+                        if (p.x > width) p.x = 0;
+
+                        ctx.fillStyle = 'rgba(16, 185, 129, 0.6)';
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+                        ctx.fill();
+
+                        // Data Pipeline Lines
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p.x - 40, p.y);
+                        ctx.stroke();
+                    });
+                }
+                // Coding AI: Code Matrix Rain
+                else if (theme === 'coding') {
+                    ctx.fillStyle = 'rgba(16, 185, 129, 0.7)';
+                    ctx.font = '12px Fira Code';
+                    items.forEach(p => {
+                        ctx.fillText(p.char, p.x, p.y);
+                        p.y += 2.5;
+                        if (p.y > height) {
+                            p.y = 0;
+                            p.x = Math.random() * width;
+                        }
+                    });
+                }
+                // Video & Audio: Equalizer Waves
+                else if (theme === 'video') {
+                    ctx.fillStyle = 'rgba(236, 72, 153, 0.25)';
+                    const barCount = 35;
+                    const barWidth = width / barCount;
+                    for (let i = 0; i < barCount; i++) {
+                        const barHeight = Math.sin(tick * 2 + i * 0.3) * 50 + 70;
+                        ctx.fillRect(i * barWidth, height - barHeight, barWidth - 4, barHeight);
+                    }
+                }
+                // Home / Default: Neural Web Network
+                else {
+                    ctx.strokeStyle = 'rgba(99, 102, 241, 0.15)';
+                    ctx.fillStyle = 'rgba(6, 182, 212, 0.5)';
+
+                    items.forEach((p, i) => {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        if (p.x < 0 || p.x > width) p.vx *= -1;
+                        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+                        ctx.fill();
+
+                        for (let j = i + 1; j < items.length; j++) {
+                            let p2 = items[j];
+                            let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                            if (dist < 120) {
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
+                                ctx.stroke();
+                            }
+                        }
+                    });
+                }
+
+                animationFrameId = requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        window.onload = function () {
+            navigateTo('home');
+        };
+    </script>
+</body>
+</html>
