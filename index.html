@@ -187,7 +187,6 @@
                     </div>
                     <div class="hidden sm:block">
                         <span class="text-xl font-black tracking-tight gradient-text">Top AI Tools</span>
-                        <span class="text-xs bg-indigo-500/20 text-indigo-300 font-semibold px-2 py-0.5 rounded-full border border-indigo-500/30 ml-2">Directory</span>
                     </div>
                 </a>
 
@@ -487,16 +486,6 @@
                         </button>
                     </div>
                 </section>
-            <!-- Bottom Copyright bar -->
-            <div class="pt-6 border-t border-slate-800/80 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p>© Top AI Tools Directory. All rights reserved.</p>
-                <div class="flex gap-6 text-slate-400">
-                    <a href="https://sites.google.com/view/top-10-ai-tools-in-2026/home" target="_blank" class="hover:text-white transition-colors">Official Portal</a>
-                    <a href="#/contact" onclick="navigateTo('contact')" class="hover:text-white transition-colors">Support</a>
-                    <a href="#/about" onclick="navigateTo('about')" class="hover:text-white transition-colors">Privacy & Terms</a>
-                </div>
-            </div>
-                </div>
 
                 <section id="top10-list" class="mb-20">
                     <div class="flex items-center justify-between mb-8">
@@ -606,7 +595,7 @@
                         <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">${subtitle}</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                         ${tools.map((t) => `
                             <div class="glass-card glass-card-hover rounded-2xl p-6 flex flex-col justify-between group">
                                 <div>
@@ -622,6 +611,15 @@
                                 </a>
                             </div>
                         `).join('')}
+                    </div>
+
+                    <!-- Explore Details Button below category listing -->
+                    <div class="flex justify-center mt-10">
+                        <a href="https://www.yttags.com/" target="_blank" rel="noopener" 
+                           class="px-8 py-4 rounded-full bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold text-base shadow-xl shadow-indigo-600/40 hover:scale-105 hover:shadow-indigo-500/60 transition-all border border-indigo-300/30 flex items-center gap-2">
+                            <span>Explore Details & Tools</span>
+                            <span class="text-lg">→</span>
+                        </a>
                     </div>
                 </div>
             `;
@@ -807,19 +805,6 @@
                 ans.classList.add('hidden');
                 icon.classList.remove('rotate-180');
             }
-        }
-
-        function filterTools() {
-            const input = document.getElementById('tool-search').value.toLowerCase();
-            const cards = document.querySelectorAll('.tool-card');
-            cards.forEach(card => {
-                const name = card.getAttribute('data-name');
-                if (name.includes(input)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
         }
 
         function handleContactSubmit(e) {
